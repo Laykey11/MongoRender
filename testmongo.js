@@ -1,7 +1,7 @@
 const { MongoClient } = require("mongodb");
 
 // The uri string must be the connection string for the database (obtained on Atlas).
-const uri = "mongodb+srv://laykenevans:Laykey11@cluster0.dsfelok.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const uri = "mongodb+srv://testuser:testpass123@cluster0.dsfelok.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
 // --- This is the standard stuff to get it to work on the browser
 const express = require('express');
@@ -33,7 +33,7 @@ console.log("Looking for: " + searchKey);
 
 async function run() {
   try {
-    const database = client.db('MyDBExample');
+    const database = client.db('MyDBexample');
     const parts = database.collection('MyStuff');
 
     
