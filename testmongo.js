@@ -36,9 +36,7 @@ async function run() {
     const database = client.db('ckmdb');
     const parts = database.collection('cmps415');
 
-    // Hardwired Query for a part that has partID '12345'
-    // const query = { partID: '12345' };
-    // But we will use the parameter provided with the route
+    
     const query = { partID: req.params.item };
 
     const part = await parts.findOne(query);
